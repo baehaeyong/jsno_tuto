@@ -13,7 +13,7 @@ def hello_world():
 
     return result
 
-@app.get('/count')
+@app.get('/count/')
 def count():
     return render_template('count.html')
 
