@@ -13,13 +13,13 @@ def hello_world():
 
     return result
 
-@app.get("/count/")
+@app.get('/count')
 def count():
     return render_template('count.html')
 
-@app.post("/result/")
+@app.post('/result/')
 def result():
-    user_input = request.form['user_input']
+    user_input = request.form['userinput']
     word_dict = dict(Counter(user_input.split()))
     result = json.dumps(word_dict)
     return Response(result,
